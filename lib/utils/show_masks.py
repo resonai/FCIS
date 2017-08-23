@@ -4,6 +4,7 @@
 # Licensed under The Apache-2.0 License [see LICENSE for details]
 # Written by Haochen Zhang
 # --------------------------------------------------------
+# micha add code from http://www.icare.univ-lille1.fr/tutorials/convert_a_matplotlib_figure
 
 import numpy as np
 import utils.image as image
@@ -49,6 +50,8 @@ def show_masks(im, detections, masks, class_names, cfg, scale=1.0, show = True):
                            '{:s} {:.3f}'.format(name, score),
                            bbox=dict(facecolor=color, alpha=0.9), fontsize=8, color='white')
     plt.imshow(im)
+    plt.savefig('1.png')
     if show:
         plt.show()
-    return im
+    #return im
+    return  cv2.imread('1.png')
